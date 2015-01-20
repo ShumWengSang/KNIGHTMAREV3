@@ -16,7 +16,14 @@ public class HighlightBox : MonoBehaviour {
 	public void HighLight(bool highlight)
 	{
 		this.highlight = highlight;
-		this.renderer.material.color = Color.blue;
+		if(highlight)
+		{
+			this.renderer.material.color = Color.blue;
+		}
+		else
+		{
+			this.renderer.material.color = Color.white;
+		}
 	}
 
 }

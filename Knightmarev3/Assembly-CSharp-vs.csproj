@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Chess Piece Script\KnightMovementScript.cs" />
      <Compile Include="Assets\Scripts\ColourSetting.cs" />
      <Compile Include="Assets\Scripts\DrawerMovement.cs" />
      <Compile Include="Assets\Scripts\GameScene Scripts\GameSceneInput.cs" />
