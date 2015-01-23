@@ -47,11 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\Chess Piece Script\KnightMovementScript.cs" />
+     <Compile Include="Assets\Scripts\Chess Piece Script\Bishop Scripts\ThreatenBoxesBishop.cs" />
+     <Compile Include="Assets\Scripts\Chess Piece Script\HighlightBox.cs" />
+     <Compile Include="Assets\Scripts\Chess Piece Script\Knight Scripts\KnightMovementScript.cs" />
+     <Compile Include="Assets\Scripts\Chess Piece Script\Pawn Scripts\ThreatenBoxesPawn.cs" />
+     <Compile Include="Assets\Scripts\Chess Piece Script\Queen Scripts\ThreatenBoxesQueen.cs" />
+     <Compile Include="Assets\Scripts\Chess Piece Script\Rook Scripts\ThreatenBoxesRook.cs" />
      <Compile Include="Assets\Scripts\ColourSetting.cs" />
      <Compile Include="Assets\Scripts\DrawerMovement.cs" />
      <Compile Include="Assets\Scripts\GameScene Scripts\GameSceneInput.cs" />
-     <Compile Include="Assets\Scripts\GameScene Scripts\HighlightBox.cs" />
      <Compile Include="Assets\Scripts\GameScene Scripts\SceneInitialization.cs" />
      <Compile Include="Assets\Scripts\InputDetection.cs" />
      <Compile Include="Assets\Scripts\SliderScript.cs" />

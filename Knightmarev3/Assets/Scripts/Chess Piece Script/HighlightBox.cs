@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class HighlightBox : MonoBehaviour {
-	bool highlight;
+	public bool highlight;
 	// Use this for initialization
 	void Start () {
 		highlight = false;
@@ -13,9 +13,9 @@ public class HighlightBox : MonoBehaviour {
 	
 	}
 
-	public void HighLight(bool highlight)
+	public void HighLight(bool INhighlight)
 	{
-		this.highlight = highlight;
+		this.highlight = INhighlight;
 		if(highlight)
 		{
 			this.renderer.material.color = Color.blue;

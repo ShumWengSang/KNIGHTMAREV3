@@ -38,6 +38,7 @@ public class KnightMovementScript : MonoBehaviour {
 				Vector3 CuncurrentBoard;
 				Array.Clear (theBoard, 0, theBoard.Length);
 
+		//This could be optimized and cleaner
 				theBoard [(int)Pos.x, (int)Pos.y] = 1;
 				for (int i = 0; i < 9; i ++) {
 						for (int j = 0; j < 9; j++) {

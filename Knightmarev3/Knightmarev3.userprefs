@@ -1,19 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Chess Piece Script\KnightMovementScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Chess Piece Script\Pawn Scripts\ThreatenBoxesPawn.cs">
     <Files>
-      <File FileName="Assets\Scripts\Chess Piece Script\KnightMovementScript.cs" Line="32" Column="4" />
-      <File FileName="Assets\Scripts\GameScene Scripts\GameSceneInput.cs" Line="42" Column="44" />
-      <File FileName="Assets\Scripts\GameScene Scripts\HighlightBox.cs" Line="4" Column="1" />
-      <File FileName="Assets\Scripts\GameScene Scripts\SceneInitialization.cs" Line="17" Column="66" />
-      <File FileName="Assets\Scripts\InputDetection.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraMovement.cs" Line="15" Column="3" />
-      <File FileName="Assets\Scripts\ColourSetting.cs" Line="14" Column="4" />
+      <File FileName="Assets\Scripts\Chess Piece Script\Pawn Scripts\ThreatenBoxesPawn.cs" Line="31" Column="1" />
+      <File FileName="Assets\Scripts\Chess Piece Script\Queen Scripts\ThreatenBoxesQueen.cs" Line="1" Column="1" />
+      <File FileName="c:\Users\132067D\Documents\GitHub\KNIGHTMAREV3\Knightmarev3\Assets\Scripts\GameScene Scripts\SceneInitialization.cs" Line="57" Column="66" />
+      <File FileName="Assets\Scripts\Chess Piece Script\Rook Scripts\ThreatenBoxesRook.cs" Line="8" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\132067D\Documents\Knightmarev3\Assets\Scripts\GameScene Scripts\Highlight Box.cs" line="18" />
+      <Breakpoint file="C:\Users\132067D\Documents\GitHub\KNIGHTMAREV3\Knightmarev3\Assets\Scripts\GameScene Scripts\GameSceneInput.cs" line="46" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
