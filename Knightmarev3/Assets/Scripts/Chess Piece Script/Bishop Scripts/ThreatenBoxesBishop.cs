@@ -20,7 +20,7 @@ public class ThreatenBoxesBishop : MonoBehaviour {
 			Bpos.x = theGameObjects [a].transform.position.x;
 			Bpos.y = theGameObjects [a].transform.position.y;
 			if (MovementRuling(new Vector2(x,y),Bpos)) {
-				theGameObjects [a].GetComponent<HighlightBox> ().HighLight (highlight);
+				theGameObjects [a].GetComponent<HighlightBox> ().HighLight (highlight, true);
 			}
 		}
 	}

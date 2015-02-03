@@ -3,6 +3,7 @@ using System.Collections;
 
 public class HighlightBox : MonoBehaviour {
 	public bool highlight;
+	
 	// Use this for initialization
 	void Start () {
 		highlight = false;
@@ -13,12 +14,15 @@ public class HighlightBox : MonoBehaviour {
 	
 	}
 
-	public void HighLight(bool INhighlight)
+	public void HighLight(bool INhighlight, bool threaten)
 	{
 		this.highlight = INhighlight;
 		if(highlight)
 		{
-			this.renderer.material.color = Color.blue;
+			if (threaten)
+				this.renderer.material.color = Color.blue;
+			else
+				this.renderer.material.color = Color.green;
 		}
 		else
 		{
