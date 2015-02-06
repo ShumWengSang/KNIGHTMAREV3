@@ -16,7 +16,11 @@ public class KnightMovementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		Vector3 roundPos = new Vector3 ();
+		roundPos.x = Mathf.RoundToInt(this.transform.position.x);
+		roundPos.y = Mathf.RoundToInt(this.transform.position.y);
+		roundPos.z = Mathf.RoundToInt(this.transform.position.z);
+		this.transform.position = roundPos;
 	}
 
 	public bool MovementRuling(Vector3 Pos, Vector3 toMove)

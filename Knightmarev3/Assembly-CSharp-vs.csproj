@@ -59,6 +59,9 @@
      <Compile Include="Assets\Scripts\GameScene Scripts\SceneInitialization.cs" />
      <Compile Include="Assets\Scripts\InputDetection.cs" />
      <Compile Include="Assets\Scripts\SliderScript.cs" />
+     <Compile Include="Assets\Scripts\Text Scripts\ComboManager.cs" />
+     <Compile Include="Assets\Scripts\Text Scripts\DifficultyManager.cs" />
+     <Compile Include="Assets\Scripts\Text Scripts\ScoreManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>

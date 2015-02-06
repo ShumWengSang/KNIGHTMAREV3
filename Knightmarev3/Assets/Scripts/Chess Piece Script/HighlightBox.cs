@@ -19,10 +19,13 @@ public class HighlightBox : MonoBehaviour {
 		this.highlight = INhighlight;
 		if(highlight)
 		{
-			if (threaten)
-				this.renderer.material.color = Color.blue;
-			else
-				this.renderer.material.color = Color.green;
+			if (this.renderer.material.color != Color.green) //If it's not already green due to the knight hightlight
+			{
+				if (threaten)
+					this.renderer.material.color = Color.red;
+				else
+					this.renderer.material.color = Color.green;
+			}
 		}
 		else
 		{
