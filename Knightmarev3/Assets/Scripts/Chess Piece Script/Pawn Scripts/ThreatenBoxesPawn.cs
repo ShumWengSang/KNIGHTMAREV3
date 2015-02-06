@@ -35,11 +35,14 @@ public class ThreatenBoxesPawn : MonoBehaviour {
 		if (theGameObjects[0] != null)
 		{
 			for (int a = 0; a < theGameObjects.Length; a++) {
-				Vector2 Bpos = new Vector2 ();
-				Bpos.x = theGameObjects [a].transform.position.x;
-				Bpos.y = theGameObjects [a].transform.position.y;
-				if (MovementRuling(this.transform.position,Bpos)) {
-					theGameObjects [a].GetComponent<HighlightBox> ().HighLight (false, false);
+				if(theGameObjects[a] != null)
+				{
+					Vector2 Bpos = new Vector2 ();
+					Bpos.x = theGameObjects [a].transform.position.x;
+					Bpos.y = theGameObjects [a].transform.position.y;
+					if (MovementRuling(this.transform.position,Bpos)) {
+						theGameObjects [a].GetComponent<HighlightBox> ().HighLight (false, false);
+					}
 				}
 			}
 		}

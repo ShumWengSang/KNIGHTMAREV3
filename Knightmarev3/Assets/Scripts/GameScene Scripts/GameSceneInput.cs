@@ -86,9 +86,59 @@ public class GameSceneInput : MonoBehaviour {
 				RaycastHit2D hit = Physics2D.Raycast(new Vector2(worldPoint.x,worldPoint.y),Vector2.zero);
 				if(hit != null)
 				{
-					if(hit.collider.gameObject.tag == "Chess Piece")
+					if(PieceSelected == false)
 					{
-						hit.collider.gameObject.GetComponent<HighlightBox>().HighLight(true, true);
+						//GET CHESS PIECE. HIGHLIGHT THE PIECE
+						//AND HIGHTLIGHT THE PLACES IT CAN GO
+						if(hit.collider.gameObject.tag == "Knight")
+						{
+							PieceSelected = true;
+							Knight = hit.collider.gameObject;
+							Knight.GetComponent<HighlightBox>().HighLight(true, false);
+							Knight.GetComponent<KnightMovementScript>().HightlightPossibleMoves(true,Knight.transform.position);
+							oldVector = new Vector3(Knight.transform.position.x,Knight.transform.position.y);
+						}
+					}
+					else
+					{
+						//THIS MEANS MOVE THE KNIGHT TO THE board piece
+						if(hit.collider.gameObject.tag == "Board Piece")
+						{
+							//check whether you can move there, than move. else cancel movement.
+							Knight.GetComponent<HighlightBox>().HighLight(false, false);
+							float x = Mathf.Round(worldPoint.x );
+							float y = Mathf.Round(worldPoint.y);
+							if(Knight.GetComponent<KnightMovementScript>().MovementRuling(Knight.transform.position,new Vector3(x,y,Knight.transform.position.z)))
+							{
+								Knight.transform.position = new Vector3(x,y,Knight.transform.position.z);
+								MovePieces();
+							}
+							Knight.GetComponent<KnightMovementScript>().HightlightPossibleMoves(false,oldVector);
+						}
+						//There is a piece the player moves here and eat it.
+						else if(hit.collider.gameObject.tag == "Chess Piece")
+						{
+							float x = Mathf.Round(worldPoint.x );
+							float y = Mathf.Round(worldPoint.y);
+							if(Knight.GetComponent<KnightMovementScript>().MovementRuling(Knight.transform.position,new Vector3(x,y,Knight.transform.position.z)))
+							{
+								Knight.transform.position = new Vector3(x,y,Knight.transform.position.z);
+								Destroy(hit.collider.gameObject);
+								SpawnPawn();
+								Knight.GetComponent<HighlightBox>().HighLight(false, true);
+							}
+							
+							Knight.GetComponent<KnightMovementScript>().HightlightPossibleMoves(false,oldVector);
+						}
+						//Player hits the piece again, so he doesn't want to move
+						else if(hit.collider.gameObject.tag == "Knight")
+						{
+							Knight.GetComponent<HighlightBox>().HighLight(false, false);
+							Knight.GetComponent<KnightMovementScript>().HightlightPossibleMoves(false,oldVector);
+						}
+						
+						//Either ways, don't select kngight anymore.
+						PieceSelected = false;
 					}
 				}
 			}
